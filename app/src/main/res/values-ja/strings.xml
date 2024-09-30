@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ニュース</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="read_more">続きを読む</string>
+    <string name="overview">概要</string>
+    <string name="newsdetails">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</string>
+    <string name="home">家</string>
+    <string name="business">仕事</string>
+    <string name="health">健康</string>
+    <string name="entertain">エンターテイメント</string>
+    <string name="science">化学</string>
+    <string name="sports">スポーツ</string>
+    <string name="tech">テクノロジー</string>
+    <string name="all_news">トップニュース</string>
+    <string name="bookmark">ブックマーク</string>
+    <string name="setting">設定</string>
+    <string name="news_details">ニュース詳細</string>
+    <string name="search">探す</string>
+    <string name="select_country">国を選択</string>
+    <string name="settings">Settings</string>
+    <string name="voice_search">音声検索</string>
+    <string name="home_menu">家</string>
+    <string name="bookmark_menu">ブックマーク</string>
+    <string name="settings_menu">設定</string>
+    <string name="share_now">今すぐ共有</string>
+    <string name="read_more_btn">続きを読む ...</string>
+    <string name="tell_query">あなたの質問を教えてください</string>
+    <string name="network_conncetion">ネットワーク接続</string>
+    <string name="enable_dark_mode">ダークモードを有効にする</string>
+    <string name="disable_dark_mode">ダークモードを無効にする</string>
+    <string name="prefered_layout">Prefered Layout</string>
+</resources>

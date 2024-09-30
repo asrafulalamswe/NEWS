@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/action_search"
+        android:title="@string/search"
+        app:actionViewClass="androidx.appcompat.widget.SearchView"
+        android:icon="@drawable/search"
+        app:showAsAction="always|collapseActionView"/>
+    <item android:id="@+id/action_voice"
+        android:title="@string/voice_search"
+        android:tooltipText="Tell me your query"
+        android:icon="@drawable/mic"
+        app:showAsAction="always" />
+</menu>

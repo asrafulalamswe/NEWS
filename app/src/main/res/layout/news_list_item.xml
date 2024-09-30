@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="newsItem"
+            type="com.mdasrafulalam.news.model.News" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="10dp"
+        android:background="@color/color_section"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/item_card_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/layout_margin_5"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="8dp"
+            app:cardCornerRadius="10dp">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp">
+
+                <LinearLayout
+                    android:id="@+id/headingLL"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="10">
+
+                    <TextView
+                        android:id="@+id/title_card"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_weight="8"
+                        android:ellipsize="end"
+                        android:marqueeRepeatLimit="marquee_forever"
+                        android:maxLines="3"
+                        android:text="@{newsItem.title}"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        tools:text="title" />
+
+                    <ImageView
+                        android:id="@+id/bookmarkIV"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_weight="2"
+                        android:src="@drawable/bookmark_grey"
+                        app:setBookMarkedIcon="@{newsItem.bookmared}"
+                        tools:ignore="ContentDescription" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/trail_text_card"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/headingLL"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_toStartOf="@+id/thumbnail_image_card"
+                    android:layout_toEndOf="@+id/thumbnail_image_card"
+                    android:ellipsize="end"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:maxLines="2"
+                    android:text="@{newsItem.description}"
+                    android:textSize="15sp"
+                    tools:text="trailText" />
+
+                <ImageView
+                    android:id="@+id/thumbnail_image_card"
+                    android:layout_width="150dp"
+                    android:layout_height="120dp"
+                    android:layout_below="@+id/headingLL"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="10dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/broken_image"
+                    app:setImageResources="@{newsItem.urlToImage}"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:id="@+id/author_card"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/trail_text_card"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@+id/thumbnail_image_card"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text='@{String.format("Author : "+newsItem.author)}'
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    tools:text="Author" />
+
+                <TextView
+                    android:id="@+id/date_card"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/author_card"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_toEndOf="@+id/thumbnail_image_card"
+                    app:dateTime="@{newsItem.publishedAt}"
+                    tools:text="date" />
+
+                <ImageView
+                    android:id="@+id/more_card"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/date_card"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="20dp"
+                    android:src="@drawable/more"
+                    android:text="@string/read_more"
+                    tools:ignore="ContentDescription" />
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+</layout>

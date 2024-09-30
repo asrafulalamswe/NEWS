@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="newsItem"
+            type="com.mdasrafulalam.news.model.News" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ScrollView
+            android:id="@+id/detailsScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            tools:context=".ui.NewsDetailsFragment">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <RelativeLayout
+                    android:id="@+id/newsDetailsRL"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="#FDFCEC">
+
+                    <TextView
+                        android:id="@+id/newsTitleTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="40dp"
+                        android:ellipsize="end"
+                        android:marqueeRepeatLimit="@integer/material_motion_duration_long_2"
+                        android:maxLines="2"
+                        android:text="@{newsItem.title}"
+                        android:textColor="@color/black"
+                        android:textSize="25sp"
+                        android:textStyle="bold"
+                        tools:text="Trumph lost the president election!" />
+
+                    <TextView
+                        android:id="@+id/newsAuthorNameTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/newsTitleTV"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="10dp"
+                        android:text="@{newsItem.author}"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        tools:text="Jhon David" />
+
+                    <TextView
+                        android:id="@+id/publishDateTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/newsAuthorNameTV"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="10dp"
+                        android:text="@{newsItem.publishedAt}"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        tools:text="Published at: 27, December" />
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="220dp"
+                        android:layout_below="@+id/publishDateTV"
+                        android:layout_marginTop="21dp"
+                        android:scaleType="fitXY"
+                        app:setImageResources="@{newsItem.urlToImage}"
+                        tools:ignore="ContentDescription"
+                        tools:src="@drawable/settings" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="15dp"
+                        android:orientation="vertical"
+                        tools:ignore="UselessParent">
+
+                        <TextView
+                            android:id="@+id/newsDetailsTV"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@{newsItem.content}"
+                            android:textColor="@color/black"
+                            android:textSize="20sp"
+                            tools:text="@string/newsdetails" />
+
+                        <TextView
+                            android:id="@+id/readMoreTV"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="@string/read_more_btn"
+                            android:textColor="@color/black"
+                            android:textSize="20sp"
+                            android:textStyle="bold|italic" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+            </LinearLayout>
+        </ScrollView>
+        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+            android:id="@+id/shareNewsFAB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true"
+            app:iconSize="30dp"
+            app:iconTint="@color/black"
+            android:layout_marginBottom="5dp"
+            android:layout_marginEnd="@dimen/dp_10"
+            android:backgroundTint="#A5D6A7"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:icon="@drawable/share"
+            android:text="@string/share_now"/>
+    </RelativeLayout>
+
+</layout>
